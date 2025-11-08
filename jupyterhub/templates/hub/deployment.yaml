@@ -167,6 +167,7 @@ spec:
               subPath: {{ . | quote }}
               {{- end }}
             {{- end }}
+          workingDir: /srv/jupyterhub
           {{- with .Values.hub.resources }}
           resources:
             {{- . | toYaml | nindent 12 }}
